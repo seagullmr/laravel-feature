@@ -3,22 +3,8 @@
 use Illuminate\Support\Str;
 
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Default Session Driver
-    |--------------------------------------------------------------------------
-    |
-    | This option controls the default session "driver" that will be used on
-    | requests. By default, we will use the lightweight native driver but
-    | you may specify any of the other wonderful drivers provided here.
-    |
-    | Supported: "file", "cookie", "database", "apc",
-    |            "memcached", "redis", "dynamodb", "array"
-    |
-    */
-
-    'driver' => env('SESSION_DRIVER', 'file'),
+    // 存储会话：每一个请求都会产生会话，推荐使用 memcached 来缓存
+    'driver' => env('SESSION_DRIVER', 'memcached'),
 
     /*
     |--------------------------------------------------------------------------
