@@ -59,5 +59,9 @@ $api->version('v1', [
         $api->get('dingos/array', 'DingosController@resArray')->name('dingos.array');
         $api->get('dingos/transformer/{id}', 'DingosController@transformer')->name('dingos.transformer');
 
+        // Carbon
+        $api->get('carbon/day', 'CarbonController@day')->name('carbon.day');
+        $api->get('carbon/month', 'CarbonController@month')->name('carbon.month');
+
     });
 });

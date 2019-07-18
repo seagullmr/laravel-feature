@@ -2,7 +2,7 @@
 
 return [
     // 项目名称
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Laravel-feature'),
     // 项目状态：production-线上运营状态
     'env' => env('APP_ENV', 'production'),
     // 调试模式：true-开启，false-关闭
