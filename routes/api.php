@@ -52,8 +52,9 @@ $api->version('v1', [
         /**
          * 游客可访问的接口
          */
-        $api->get('user', 'UsersController@index');
+        $api->get('user', 'UsersController@index')->name('user.index');
         $api->get('user/{id}', 'UsersController@show')->name('user.show');
+        $api->get('search', 'UsersController@search')->name('user.search');
 
         // Dingo API
         $api->get('dingos/array', 'DingosController@resArray')->name('dingos.array');

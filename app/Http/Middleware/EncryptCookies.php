@@ -7,7 +7,7 @@ use Illuminate\Cookie\Middleware\EncryptCookies as Middleware;
 class EncryptCookies extends Middleware
 {
     /**
-     * The names of the cookies that should not be encrypted.
+     * 对 Cookie 进行加解密处理与验证。可通过 $except 数组属性设置不做加密处理的 cookie
      *
      * @var array
      */

@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Auth;
 class RedirectIfAuthenticated
 {
     /**
-     * Handle an incoming request.
+     * 当请求页是 注册、登录、忘记密码 时，检测用户是否已经登录，
+     * 如果已经登录，那么就重定向到首页，如果没有就打开相应界面。
+     * 可以在 handle 方法中定制重定向到的路径
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next

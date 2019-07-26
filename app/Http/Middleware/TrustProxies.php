@@ -8,14 +8,18 @@ use Fideloper\Proxy\TrustProxies as Middleware;
 class TrustProxies extends Middleware
 {
     /**
-     * The trusted proxies for this application.
+     * 配置可信代理
+     */
+
+    /**
+     * 可通过 $proxies 属性设置可信代理列表
      *
      * @var array|string
      */
     protected $proxies;
 
     /**
-     * The headers that should be used to detect proxies.
+     * $headers 属性设置用来检测代理的 HTTP 头字段
      *
      * @var int
      */

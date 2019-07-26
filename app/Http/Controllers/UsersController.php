@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Transformers\UserTransformer;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -25,5 +26,11 @@ class UsersController extends Controller
     {
         $user = User::query()->findOrFail($id);
         return $this->response->array($user->toArray());
+    }
+
+    public function search(User $user)
+    {
+        $list = $user::query()->whereBetween('updated_at', ['1995-03-26', Carbon::today()])->get();
+        return $this->response->array($list->toArray());
     }
 }

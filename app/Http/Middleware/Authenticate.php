@@ -7,7 +7,7 @@ use Illuminate\Auth\Middleware\Authenticate as Middleware;
 class Authenticate extends Middleware
 {
     /**
-     * Get the path the user should be redirected to when they are not authenticated.
+     * 用户身份验证。返回未经身份验证的用户应该重定向到的路径。
      *
      * @param  \Illuminate\Http\Request  $request
      * @return string
