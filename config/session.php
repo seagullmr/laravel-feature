@@ -4,7 +4,7 @@ use Illuminate\Support\Str;
 
 return [
     // 存储会话：每一个请求都会产生会话，推荐使用 memcached 来缓存
-    'driver' => env('SESSION_DRIVER', 'memcached'),
+    'driver' => env('SESSION_DRIVER', 'redis'),
 
     /*
     |--------------------------------------------------------------------------
@@ -49,7 +49,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Database Connection
+    | Session 数据库连接
     |--------------------------------------------------------------------------
     |
     | When using the "database" or "redis" session drivers, you may specify a
@@ -58,7 +58,7 @@ return [
     |
     */
 
-    'connection' => env('SESSION_CONNECTION', null),
+    'connection' => env('SESSION_CONNECTION', 'session'),
 
     /*
     |--------------------------------------------------------------------------
